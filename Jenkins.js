@@ -72,7 +72,7 @@ function lookup3(k, pc, pb) {
         c += k.charCodeAt(offset + 10) << 16;
         c += k.charCodeAt(offset + 11) << 24;
 
-        mixed = mix(a, b, c);
+        var mixed = mix(a, b, c);
         a = mixed.a;
         b = mixed.b;
         c = mixed.c;
