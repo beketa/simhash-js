@@ -71,7 +71,7 @@ function combineShingles(shingles) {
     for (var pos = 0; pos < 32; pos++) {
         var weight = 0;
         for (var i in shingles) {
-            shingle = parseInt(shingles[i], 16);
+            var shingle = parseInt(shingles[i], 16);
             weight += !(~shingle & mask) == 1 ? 1 : -1;
         }
         if (weight > 0) simhash |= mask;
